@@ -1,5 +1,15 @@
+import model.Movie;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Movie myMovie = new Movie();
+        myMovie.name = "The Godfather";
+        myMovie.launchYear = 1970;
+        myMovie.minutes = 300;
+
+
+        System.out.println(myMovie); // Here it will print Movie@memoryAdress
+        System.out.println(myMovie.name);
+        System.out.println(myMovie.launchYear);
     }
 }
