@@ -1,14 +1,14 @@
 package model;
 
-public class Movie {
+public class Movie extends Tittle {
 
-    public String name;
-    public int launchYear;
+    private String director;
 
-    public boolean planIncluded;
+    public String getDirector() {
+        return director;
+    }
 
-    public double score;
-
-    public int minutes;
-
+    public void setDirector(String director) {
+        this.director = director;
+    }
 }
