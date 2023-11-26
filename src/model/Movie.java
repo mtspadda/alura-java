@@ -1,6 +1,8 @@
 package model;
 
-public class Movie extends Tittle {
+import calc.Classification;
+
+public class Movie extends Tittle implements Classification {
 
     private String director;
 
@@ -10,5 +12,14 @@ public class Movie extends Tittle {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public int getClassification(){
+        return 0;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) returnMid()/ 2 ;
     }
 }
