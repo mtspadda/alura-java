@@ -10,6 +10,16 @@ public class Episode implements Classification {
 
     private TvShow tvShow;
 
+    private int totalViews;
+
+    public int getTotalViews() {
+        return totalViews;
+    }
+
+    public void setTotalViews(int totalViews) {
+        this.totalViews = totalViews;
+    }
+
     public int getNumero() {
         return numero;
     }
@@ -36,6 +46,8 @@ public class Episode implements Classification {
 
     @Override
     public int getClassificacao() {
-        return 0;
+        if (totalViews > 100){
+            return 4;
+        } else return 0;
     }
 }
